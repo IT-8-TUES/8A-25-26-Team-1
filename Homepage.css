@@ -1,0 +1,66 @@
+body {
+    background-color: white;
+}
+
+#cookies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: black;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 400px;
+    max-height: 500px;
+    height: 300px;
+    gap: 12px;
+    border: 2px solid black;
+    margin: 50px auto;
+    position: relative;
+    top: 115px;
+    left: auto;
+}
+
+#acceptcookies {
+    background-color: rgb(2, 156, 2);
+    color: black;
+    height: 35px;
+    width: 98%;
+}
+
+#acceptcookies:hover {
+    background-color: rgb(8, 203, 8);
+    height: 36px;
+    width: 100%;
+}
+
+#declinecookies {
+    height: 25px;
+    width: 98%;
+}
+
+#declinecookies:hover {
+    height: 26px;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(34, 110, 240);
+    display: flex;
+}
+
+#firstpagebutton {
+    background-color: aqua;
+    color: black;
+    width: 400px;
+    height: 100px;
+    padding: 20px;
+}
