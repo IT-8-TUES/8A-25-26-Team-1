@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: black;
 }
 
 #cookies {
@@ -8,6 +8,7 @@ body {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    background-color: white;
     color: black;
     padding: 20px;
     border-radius: 12px;
@@ -24,7 +25,7 @@ body {
 
 #acceptcookiesbutton {
     background-color: rgb(2, 156, 2);
-    color: black;
+    color: white;
     height: 35px;
     width: 98%;
     border-radius: 10px;
@@ -38,6 +39,7 @@ body {
 
 #declinecookiesbutton {
     background-color: rgb(120, 120, 120);
+    color: white;
     height: 25px;
     width: 98%;
     border-radius: 10px;
@@ -54,16 +56,44 @@ header {
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    background-color: black;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(34, 110, 240);
 }
 
-#firstpagebutton {
-    background-color: aqua;
-    color: black;
+#browsecontainer {
+    display: flex;
+    justify-content: column;
+    position: relative;
+    align-items: center;
+    top: 20px;
+    left: 20px;
+}
+
+#browsebutton {
+    background-color: rgb(4, 15, 177);
+    color: white;
+    border-radius: 10px;
     width: 400px;
     height: 100px;
     padding: 20px;
+}
+
+#browsebuttonscontainer {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.browsebuttons {
+    background-color: rgb(4, 15, 177);
+    color: white;
+    border-radius: 10px;
+    size: 98%;
+}
+
+.browsebuttons:hover {
+    text-decoration: underline;
+    size: 100%;
 }
