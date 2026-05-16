@@ -9,13 +9,14 @@
 <body>
     <header>
         <div id="browsecontainer">
-            <button id="browsebutton">
-                <div id="browsebuttonscontainer">
-                    <button class="browsebuttons" onclick="TakeToSecondPage()">First page</button>
-                    <button class="browsebuttons">Second page</button>
-                    <button class="browsebuttons">Third page</button>
-                </div>
-            </button>
+            Pages:
+            <span id="rghtarrow">&#9654;</span>
+            <span id="dwnarrow">&#9660;</span>
+            <div id="browsebuttonscontainer">
+                <button class="browsebuttons" onclick="TakeToSecondPage()">How to use git</button>
+                <button class="browsebuttons">How to install git</button>
+                <button class="browsebuttons">Help with git</button>
+            </div>
         </div>
     </header>
     <div id="cookies">
@@ -28,7 +29,7 @@
         <button id="acceptcookiesbutton" onclick="HideCookies()">
             Accept
         </button>
-        <button id="declinecookiesbutton" onclick="DeclineCookies()">
+        <button id="declinecookiesbutton" onclick="HideCookies()">
             Decline
         </button>
     </div>
