@@ -7,6 +7,8 @@ info1.style.display='none';
 info2.style.display='none';
 info3.style.display='none';
 info4.style.display='none';
+
+
 let s3=0, s=0, s2=0, s4=0;
 function show(a){
     if(a===1) {s++;if(s%2)info1.style.display='block'; else info1.style.display='none';}
