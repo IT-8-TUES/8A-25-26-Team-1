@@ -5,19 +5,9 @@ const info3=document.getElementById("info3");
 info1.style.display='none';
 info2.style.display='none';
 info3.style.display='none';
-let s=0;
-function showr(a){
-    if(a===1) info1.style.display='block';
-    if(a===2) info2.style.display='block';
-    if(a===3) info3.style.display='block';
-}
-function hider(a){
-    if(a===1) info1.style.display='none';
-    if(a===2) info2.style.display='none';
-    if(a===3) info3.style.display='none';
-}
+let s3=0, s=0, s2=0;
 function show(a){
-    s++;
-    if(s%2===1) showr(a);
-    else hider(a);
+    if(a===1) {s++;if(s%2)info1.style.display='block'; else info1.style.display='none';}
+    if(a===2) {s2++;if(s2%2)info2.style.display='block'; else info2.style.display='none';}
+    if(a===3) {s3++;if(s3%2)info3.style.display='block'; else info3.style.display='none';}
 }
