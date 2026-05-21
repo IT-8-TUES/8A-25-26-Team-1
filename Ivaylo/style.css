@@ -8,8 +8,9 @@ body{
 .step{
     background-color: white;
     color: black;
-    
+    margin: 1%;
 }
 #Buttons{
     padding-left: 0%;
+    
 }
