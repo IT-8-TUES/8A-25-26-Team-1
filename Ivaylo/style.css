@@ -2,11 +2,14 @@ body{
     background-color: black;
     color: white;
 }
-h1{
-    padding-left: 35%;
+#Chap1{
+    text-align: center;
 }
 .step{
     background-color: white;
     color: black;
     
+}
+#Buttons{
+    padding-left: 0%;
 }
