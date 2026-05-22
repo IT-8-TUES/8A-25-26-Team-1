@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>How to Install Git</title>
+    <title>How to Install Git and GitHub</title>
+    <link rel="stylesheet" href="HowToInstallGit.css">
 </head>
 <body>
-    <link rel="stylesheet" type="text/css" href="HowToInstallGit.css">
-    <h1>How to Install Git</h1>
-    <p></p>
-</body>
+    <header>
+    <h1>How to Install Github and Git</h1>
+    <p>step by step guide for begineners</p>
+    </header>
+    <div>
+         <div>
+            <h2>important Clarification</h2>
+            <p>note: GitHub is cloud-based hosting service (a website) where you can write and store your code,while Git is the local command-line tool (software) you install on your computer to track changes.To use GitHub, you must first install Git.</p>
+         </div>
+    </div>
+
+    <div>
+        <h2>Step 1: Installing Git</h2>
+        <p>Choose your operating system (Windows, macOS, or Linux) and follow the instructions below:</p>
+        <div>
+                <button id="btnWindows">Windows</button>
+                <button id="btnMac">macOS</button>
+                <button id="btnLinux">Linux</button>
+            </div>
+            <div id="contentWindows">
+                <h3>Windows installation</h3>
+                <p>The fastest way is using the terminal(PowerShell or Command Prompt):</p>
+                <div>
+                    <p>winget install Git.Git</p>
+                </div>
+            <p>Alternatively, you can download the installer from the official website and follow the setup wizard.</p>
+            <a href="https://git-scm.com/" target="_blank">Go to official Git website</a>
+            </div>
+            <div id="contentMac">
+                <h3>macOS Installation</h3>
+                <p>Open Terminal and type the following command to check if you already have it:</p>
+                <div>
+                    <p>git --version</p>
+                </div>
+                <p>If you prefer using Homebrew, run:</p>
+                <div>
+                    <p>brew install git</p>
+                </div>
+            </div>
+            <div id="contentLinux">
+                <h3>Linux Installation</h3>
+                <p>Run the following command in your terminal:</p>
+                <div>
+                    <p>sudo apt update</p>
+                    <p>sudo apt install git</p>
+                </div>
+            </div>
+    </div>
+        <h2>Step 2: installing configuration</h2>
+        <p>Once the installation is complete, open a new terminal window and configure your username and email:</p>
+        <div>
+            <p>git config --global user.name "Your Name"</p>
+            <p>git config --global user.email "your.email@example.com"</p>
+        </div>
+    </div>
+    <div>
+        <h2>Step 3: Create a GitHub Account</h2>
+        <p>Go to the GitHub website</p>
+        <a href="https://github.com" target="_blank">Go to GitHub.com</a>
+        <p>Click on the "Sign up" button in the top right corner</p>
+        <p>Enter your email,create a password, and choose a username</p>
+        <p> Verify your account through the link sent to your email</p>
+    </div>
+</div>
+</div>
+    </body>
+<script src="HowToInstallGit.js"></script>
 </html>
