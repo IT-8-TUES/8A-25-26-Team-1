@@ -17,3 +17,18 @@ body{
 .info{
     text-align: center;
 }
+#find{
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-left: 4%;
+    padding-right: 4%;
+    font-size: large;
+    
+}
+#search{
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: large;
+}
