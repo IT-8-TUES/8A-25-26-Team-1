@@ -11,7 +11,7 @@ function HideBrowseButtons() {
     document.getElementById("browsebuttonscontainer").style.display = "none";
 }
 function TakeToSecondPage() {
-    window.location.replace('gitcmd.html');
+    window.location.replace('howtouse.html');
 }
 
 const browseContainer = document.getElementById("browsecontainer");
