@@ -13,14 +13,23 @@ body {
     padding: 20px;
     border-radius: 12px;
     max-width: 400px;
-    max-height: 500px;
     height: 300px;
     gap: 12px;
     border: 2px solid black;
-    margin: 50px auto;
-    position: relative;
-    top: 115px;
-    left: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+#cookieoverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
 }
 
 #acceptcookiesbutton {
@@ -71,9 +80,12 @@ header {
     background-color: black;
     color: white;
     font-size: 20px;
-    top: epx;
-    left: 20px;
-    width: 200px;
+    top: 3px;
+    left: 50px;
+    width: auto;
+    gap: 12px;
+    padding-bottom: 10px;
+    white-space: nowrap;
 }
 
 #browsecontainer:hover {
@@ -81,36 +93,181 @@ header {
 }
 
 #browsebuttonscontainer {
-    display: none;
+    display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 3px;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 320ms ease, transform 320ms ease;
+    padding-top: 5px;
 }
 
-.browsebuttons {
+.subbuttons {
     background-color: black;
     color: white;
     border: none !important;
-    width: 98%;
 }
 
-.browsebuttons:hover {
+.subbuttons:hover {
     text-decoration: underline;
-    size: 100%;
     cursor: pointer;
 }
 
-#dwnarrow {
-    display: none;
+.dwnarrow {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-2px);
+    transition: opacity 200ms ease, transform 200ms ease;
+    line-height: 1;
 }
 
-#browsecontainer:hover #rghtarrow {
-    display: none;
+#browsecontainer:hover .dwnarrow,
+#namescontainer:hover .dwnarrow {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-#browsecontainer:hover #dwnarrow {
-    display: inline;
+#browsecontainer:hover #browsebuttonscontainer {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#browsebuttonscontainer.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#namescontainerbuttons {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 320ms ease, transform 320ms ease;
+}
+
+#namescontainer:hover #namescontainerbuttons {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#namescontainerbuttons.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#namescontainer {
+    position: absolute;
+    left: 165px;
+    top: 19px;
+    background-color: black;
+    color: white;
+    width: auto;
+    font-size: 20px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+#namescontainer .spantext {
+    font-size: 18px;
+    color: white;
+}
+
+.spantext {
+    cursor: pointer;
+}
+
+#namescontainerbuttons .subbuttons {
+    background-color: black;
+    color: white;
+    white-space: nowrap;
+}
+
+#githublink {
+    position: absolute;
+    left: 305px;
+    top: 41px;
+}
+
+#githubbutton {
+    color: white;
+    position: absolute;
+    background-color: black;
+    border: none !important;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+#githubbutton:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#maintext {
+    color: white;
+    text-align: center;
+    padding-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+#gitimgsource {
+    color: white;
+    background-color: black;
+    border: none !important;
+}
+
+#gitimgsource:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#gitimg {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+#gotootherpages {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.gotootherpagesbuttons {
+    background-color: rgb(60, 60, 60);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.gotootherpagesbuttons:hover {
+    background-color: rgb(100, 100, 100);
+    text-decoration: underline;
+    transform: scale(1.05);
 }

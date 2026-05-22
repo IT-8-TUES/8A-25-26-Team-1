@@ -2,36 +2,77 @@
 <html>
 
 <head>
-    <title>Website.com</title>
+    <title>Welcome!</title>
     <link rel="stylesheet" href="Homepage.css">
 </head>
 
 <body>
     <header>
         <div id="browsecontainer">
-            Pages:
-            <span id="rghtarrow">&#9654;</span>
-            <span id="dwnarrow">&#9660;</span>
+            <div class="spantext">Pages: <span class="dwnarrow">&#9660;</span></div>
             <div id="browsebuttonscontainer">
-                <button class="browsebuttons" onclick="TakeToSecondPage()">How to use git</button>
-                <button class="browsebuttons">How to install git</button>
-                <button class="browsebuttons">Help with git</button>
+                <button class="subbuttons" onclick="TakeToSecondPage()">How to install git</button>
+                <button class="subbuttons" onclick="TakeToThirdPage()">How to use git</button>
+                <button class="subbuttons" onclick="TakeToFourthPage()">Help with git</button>
             </div>
         </div>
+
+        <div id="namescontainer">
+            <div class="spantext">Contributors <span class="dwnarrow">&#9660;</span></div>
+            <div id="namescontainerbuttons">
+                <button class="subbuttons">Alexander Stratev</button>
+                <button class="subbuttons">Vladimir Bogdanov</button>
+                <button class="subbuttons">Ivan Petrov</button>
+            </div>
+        </div>
+        <a href="https://github.com/" id="githublink">
+            <button id="githubbutton">
+                Github's official website
+            </button>
+        </a>
     </header>
-    <div id="cookies">
-        <h2>
-            This site uses cookies.
-        </h2>
+    <div id="maintext">
+        <h1>
+            What is git?
+        </h1>
+        <img src="gitbranch.png" id="gitimg">
+        <a href="https://iconscout.com/de/icons/git" target="_blank">
+            <button id="gitimgsource">https://iconscout.com/de/icons/git</button>
+        </a>
         <p>
-            {cookie text}
+            <h4>
+                Git is a local program that tracks changes made to files over time, allowing developers to save their code,
+                revert to earlier versions, and experiment with new features safely using separate branches. GitHub is a
+                cloud hosting platform that is used to run Git and save the files on servers.
+            </h4>
         </p>
-        <button id="acceptcookiesbutton" onclick="HideCookies()">
-            Accept
+    </div>
+    <div id="gotootherpages">
+        <button class="gotootherpagesbuttons" onclick="TakeToGitInstallPage()">
+            I want to install git
         </button>
-        <button id="declinecookiesbutton" onclick="HideCookies()">
-            Decline
+        <button class="gotootherpagesbuttons" onclick="TakeToGitUsePage()">
+            I want to learn how to use git
         </button>
+        <button class="gotootherpagesbuttons" onclick="TakeToGitHelpPage()">
+            I have problems with git
+        </button>
+    </div>
+    <div id="cookieoverlay">
+        <div id="cookies">
+            <h2>
+                This site uses cookies.
+            </h2>
+            <p>
+                Cookies are things that take your activity on this website and store it.
+            </p>
+            <button id="acceptcookiesbutton" onclick="HideCookies()">
+                Accept
+            </button>
+            <button id="declinecookiesbutton" onclick="HideCookies()">
+                Decline
+            </button>
+        </div>
     </div>
     <script src="Homepage.js"></script>
 </body>
