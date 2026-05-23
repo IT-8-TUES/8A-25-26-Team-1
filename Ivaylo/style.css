@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.Chap1{
+    text-align: center;
+}
+.step{
+    background-color: white;
+    color: black;
+    
+    padding-top:10px ;
+    padding-bottom: 10px;
+    
+}
+.info{
+    text-align: center;
+}
+#yn{
+    width: 1%;
+    height: 1%;
+}
